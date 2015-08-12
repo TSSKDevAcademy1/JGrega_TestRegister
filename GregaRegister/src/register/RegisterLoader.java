@@ -2,7 +2,7 @@ package register;
 
 public interface RegisterLoader {
 
-	ArrayRegister load();
+	Register load();
 
 	/////////////////////////////// FUNKCIA PRE ULOZENIE UDAJOV PO EXITE ////////////////////////////
 	void save(Register register);

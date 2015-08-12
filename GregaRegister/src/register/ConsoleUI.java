@@ -14,10 +14,11 @@ import java.io.Serializable;
 /**
  * User interface of the application.
  */
-public class ConsoleUI {
+public class ConsoleUI implements Serializable{
 	/** register.Register of persons. */
-	private ArrayRegister register;
-
+//	private ArrayRegister register;
+//	private ListRegister register;
+	private Register register;
 	// private RegisterLoader registerLoader = new FileRegisterLoader();
 	private RegisterLoader registerLoader = new DatabaseRegisterLoader();
 	/**
@@ -34,15 +35,15 @@ public class ConsoleUI {
 		PRINT, ADD, UPDATE, REMOVE, FIND, EXIT
 	};
 
-	public ConsoleUI(final ArrayRegister register) {
+	public ConsoleUI(Register register) { // final ArrayRegister register
 		this.register = register;
 
-		System.out.println("Tu som dosiele");
+		//System.out.println("Tu som dosiele");
 		this.register = registerLoader.load(); // nacita hodnoty zo suboru
 
 	}
 
-	public void run() {
+	public void run() throws Exception {
 
 		while (true) {
 			switch (showMenu()) {
@@ -132,7 +133,7 @@ public class ConsoleUI {
 	}
 
 	// TODO: Implement the method findInRegister
-	private void findInRegister() {
+	private void findInRegister() throws Exception {
 
 		System.out.println("(1. Find by name 2. Find by phoneNumber)Enter your choice:");
 		int choice = Integer.parseInt(readLine());

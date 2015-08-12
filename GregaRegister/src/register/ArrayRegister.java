@@ -61,7 +61,7 @@ public class ArrayRegister implements Serializable, Register {
 		count++;
 	}
 
-	void setPerson(Person person, int a) {
+	public void setPerson(Person person, int a) {
 		persons[a] = person;
 	}
 

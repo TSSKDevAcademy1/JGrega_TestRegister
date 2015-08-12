@@ -41,8 +41,9 @@ public interface Register {
 	 * @param name
 	 *            name of a person to search for
 	 * @return person with specified phone number
+	 * @throws Exception 
 	 */
-	Person findPersonByName(String name);
+	Person findPersonByName(String name) throws Exception;
 
 	// TODO: Implement the method findPersonByPhoneNumber
 	/**
@@ -52,8 +53,9 @@ public interface Register {
 	 * @param phoneNumber
 	 *            phone number of a person to search for
 	 * @return person with specified phone number
+	 * @throws Exception 
 	 */
-	Person findPersonByPhoneNumber(String phoneNumber);
+	Person findPersonByPhoneNumber(String phoneNumber) throws Exception;
 
 	/**
 	 * 1
@@ -64,5 +66,7 @@ public interface Register {
 	 *            person to remove
 	 */
 	void removePerson(Person person);
+
+	void setPerson(Person person, int i);
 
 }
