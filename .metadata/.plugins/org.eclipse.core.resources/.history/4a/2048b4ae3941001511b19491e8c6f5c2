@@ -1,0 +1,10 @@
+package register;
+
+public interface RegisterLoader {
+
+	ArrayRegister load();
+
+	/////////////////////////////// FUNKCIA PRE ULOZENIE UDAJOV PO EXITE ////////////////////////////
+	void save(ArrayRegister register);
+	
+}
